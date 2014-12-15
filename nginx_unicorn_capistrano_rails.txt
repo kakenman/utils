@@ -1,0 +1,17 @@
+* production/staging server side
+- install rails on production/staging servers
+ -> just run rails_initial_amazon_linux.sh
+- set nginx up
+ -> just replace /etc/nginx/nginx.conf with one in this directory
+- start nginx
+ $ sudo start nginx
+- register public key on github
+ $ ssh-keygen
+ register .ssh/id_rsa.pub as a deploy key for the target repository
+- set SECRET_KEY_BASE 
+ put rails.sh in /etc/profile.d
+ update secret_key_base in rails.sh to any md5 hash
+
+* rails app side
+
+
