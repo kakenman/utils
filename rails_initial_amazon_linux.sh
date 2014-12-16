@@ -18,7 +18,8 @@ source ~/.bash_profile
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 rbenv install 2.0.0-p598
 
-gem install bundler
-gem install rb-readline
-gem install rails 
+rbenv exec gem install bundler
+rbenv exec gem install rb-readline
+rbenv exec gem install rails 
+rbenv rehash
 
