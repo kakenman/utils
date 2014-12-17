@@ -4,6 +4,10 @@
 # last updated on Dec 16, 2014 by kakenman
 # this may take 15 min.
 
+echo "installing initial environment for rails on nginx."
+echo "ruby version: 2.1.5"
+date
+
 LANG=C
 sudo yum -y update
 sudo yum install -y git vim sudo tar wget
@@ -26,3 +30,5 @@ rbenv exec gem install rb-readline
 rbenv exec gem install rails 
 rbenv rehash
 
+date
+echo "installation finished"
