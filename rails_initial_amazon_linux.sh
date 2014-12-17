@@ -2,6 +2,7 @@
 # initial commands for amazon linux to launch rails on nginx
 # created and test for Amazon Linux AMI 2014.09.1 (HVM) - ami-4985b048
 # last updated on Dec 16, 2014 by kakenman
+# this may take 15 min.
 
 LANG=C
 sudo yum -y update
@@ -16,7 +17,9 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-rbenv install 2.0.0-p598
+rbenv install 2.1.5
+rbenv global 2.1.5
+
 
 rbenv exec gem install bundler
 rbenv exec gem install rb-readline
