@@ -10,7 +10,7 @@ date
 
 LANG=C
 sudo yum -y update
-sudo yum install -y git vim sudo tar wget
+sudo yum install -y git vim sudo tar wget emacs
 sudo yum install -y gcc make gcc-c++ zlib-devel httpd-devel openssl-devel curl-devel sqlite-devel
 sudo yum install -y nginx
 sudo yum install -y ruby-devel
@@ -19,8 +19,8 @@ sudo yum install -y ruby-devel
 sudo yum install -y patch
 
 sudo yum install -y mysql-devel mysql-server
-sudo yum intall -y ImageMagick-devel
-
+sudo yum install -y ImageMagick-devel
+sudo chkconfig mysqld on
 
 
 cd
