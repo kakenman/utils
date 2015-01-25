@@ -15,6 +15,14 @@ sudo yum install -y gcc make gcc-c++ zlib-devel httpd-devel openssl-devel curl-d
 sudo yum install -y nginx
 sudo yum install -y ruby-devel
 
+# installed for nokogiri
+sudo yum install -y patch
+
+sudo yum install -y mysql-devel mysql-server
+sudo yum intall -y ImageMagick-devel
+
+
+
 cd
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
@@ -29,6 +37,8 @@ rbenv exec gem install bundler
 rbenv exec gem install rb-readline
 rbenv exec gem install rails 
 rbenv rehash
+
+sudo service mysqld start
 
 date
 echo "installation finished"

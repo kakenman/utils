@@ -4,7 +4,7 @@
 - set nginx up
  -> just replace /etc/nginx/nginx.conf with one in this directory
 - start nginx
- $ sudo start nginx
+ $ sudo service nginx start
 - register public key on github
  $ ssh-keygen
  register .ssh/id_rsa.pub as a deploy key for the target repository
@@ -35,8 +35,9 @@ end
 ####
 - create initial settings for unicorn
  $ bundle install --path vendor/bundle
- put unicorn.rb in config/ 
+ $ cp unicorn.rb ${destinationfolder}config/ 
 - test unicorn
+ $ sudo nginx
  $ bundle exec unicorn -c config/unicorn.rb
  access http://localhost
 
@@ -107,7 +108,12 @@ set :ssh_options, {
 copy prodcution.rb into config/unicorn/
 modify appname
 
+- create database
+
+
+
 - check deploy settings
  $ bundle exec cap production deploy:check
-
+ or
+ $ bundle exec cap -S branch="xxxx" production deploy:check
 
