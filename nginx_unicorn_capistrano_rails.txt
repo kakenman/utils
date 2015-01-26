@@ -110,7 +110,11 @@ modify appname
 
 - create database
 
-
+modify /etc/my.cnf so that databases are created with utf-8
+set root password
+create database
+create user
+grant user on database
 
 - check deploy settings
  $ bundle exec cap production deploy:check
