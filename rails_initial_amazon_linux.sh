@@ -19,6 +19,7 @@ sudo yum install -y ruby-devel
 sudo yum install -y patch
 
 sudo yum install -y mysql-devel mysql-server
+
 sudo yum install -y ImageMagick-devel
 sudo chkconfig mysqld on
 
